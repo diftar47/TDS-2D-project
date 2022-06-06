@@ -50,12 +50,9 @@ public class UI : MonoBehaviour
 
     public void UpgradeBulletSpeed()
     {
-        if (Player.score !< 0)
-        {
-            Player.score -= 1;
-            Player.bulletForce += 0.5f;
-            currentSpeedText.text = string.Format("Current speed: {0}", Player.bulletForce);
-        }
+        Player.score--;
+        Player.bulletForce += 0.5f;
+        currentSpeedText.text = string.Format("Current speed: {0}", Player.bulletForce);
     }
 
     public void ApplicationQuit()

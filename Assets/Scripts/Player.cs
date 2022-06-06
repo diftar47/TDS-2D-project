@@ -22,8 +22,6 @@ public class Player : MonoBehaviour
         }
 
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        Debug.Log(score);
     }
 
     private void FixedUpdate()
