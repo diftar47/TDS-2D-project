@@ -10,13 +10,13 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private float bulletForce = 20f;
+    public static float bulletForce = 20f;
     [SerializeField] private GameObject lossCanvas;
     private Vector2 mousePosition;
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKeyDown(KeyCode.Mouse0) && (Time.timeScale == 1))
         {
             Fire();
         }
