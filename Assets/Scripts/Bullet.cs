@@ -14,11 +14,14 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D colliderInfo)
     {
-        Debug.Log(colliderInfo);
-        Destroy(colliderInfo.gameObject);
-        Destroy(gameObject);
-        Player.score += 1;
-        Player.money += 1;
+        if (Time.timeScale == 1)
+        {
+            Debug.Log("The bullet hit in " + colliderInfo);
+            Destroy(colliderInfo.gameObject);
+            Destroy(gameObject);
+            Player.score += 1;
+            Player.money += 1;
+        }
     }
 
     private IEnumerator DestroyBullet()
